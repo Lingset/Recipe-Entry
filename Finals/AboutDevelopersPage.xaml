@@ -1,0 +1,20 @@
+﻿<Page x:Class="Finals.AboutDevelopersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="AboutDevelopersPage">
+
+    <Grid Background="#F0F0F0" Height="235">
+        <!-- Title -->
+        <TextBlock Text="About the Developers" FontSize="32" FontWeight="Bold" Margin="0,0,0,74" HorizontalAlignment="Center" Width="333"/>
+
+        <!-- Developer Information -->
+        <StackPanel Margin="0,60,0,10" HorizontalAlignment="Center" Width="170">
+            <TextBlock Text="BALOS, CEDRICK KEANU"/>
+            <TextBlock Text="CAPILLAN, DEXTER"/>
+            <TextBlock Text="LINGSET, CHRISTIAN"/>
+            <TextBlock Text="MARIANO, ALJON KENT"/>
+            <TextBlock Text="MARTIN, CARLOMARTIN"/>
+        </StackPanel>
+       
+    </Grid>
+</Page>

@@ -1,0 +1,49 @@
+﻿<Page x:Class="Finals.RecipeEntryPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="RecipeEntryPage">
+
+    <Grid Margin="20" Background="#F0F0F0">
+        <!-- Title -->
+        <TextBlock Text="Recipe Entry" FontSize="32" FontWeight="Bold" Margin="0,0,0,20" HorizontalAlignment="Center"/>
+
+        <!-- Container for Recipe Entry -->
+        <Border Background="White" CornerRadius="5">
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <!-- Recipe Name -->
+                <TextBlock Text="Recipe Name:" FontWeight="Bold" VerticalAlignment="Center"/>
+                <TextBox x:Name="textRecipeName" Margin="83,10,75,10" Grid.Row="0"/>
+
+                <!-- Ingredients -->
+                <TextBlock Text="Ingredients:" FontWeight="Bold" VerticalAlignment="Center" Margin="0,10,0,0" Grid.Row="1"/>
+                <TextBox x:Name="textIngredients" Width="300" Height="100" Margin="10" Grid.Row="1" AcceptsReturn="True"/>
+
+                <!-- Instructions -->
+                <TextBlock Text="Instructions:" FontWeight="Bold" VerticalAlignment="Center" Margin="0,10,0,0" Grid.Row="2"/>
+                <TextBox x:Name="textInstructions" Width="300" Height="100" Margin="10" Grid.Row="2" AcceptsReturn="True"/>
+
+                <!-- Buttons for CRUD operations -->
+                <StackPanel Orientation="Horizontal" Margin="0,20,0,0" Grid.Row="3">
+                    <Button Content="Create" Width="80" Margin="5" Click="CreateButton_Click"/>
+                    <Button Content="Read" Width="80" Margin="5" Click="ReadButton_Click"/>
+                    <Button Content="Update" Width="80" Margin="5" Click="UpdateButton_Click"/>
+                    <Button Content="Delete" Width="80" Margin="5" Click="DeleteButton_Click"/>
+                    <Button Content="Search" Width="80" Margin="5" Click="SearchButton_Click"/>
+                </StackPanel>
+
+                <!-- Display/Search Results with ScrollViewer -->
+                <ScrollViewer Grid.Row="4" VerticalScrollBarVisibility="Auto">
+                    <ListBox x:Name="lstRecipes" Width="306" Height="150" Margin="10"/>
+                </ScrollViewer>
+            </Grid>
+        </Border>
+    </Grid>
+</Page>
